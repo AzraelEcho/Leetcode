@@ -1,0 +1,30 @@
+S = 'abcde'
+words = ['a','bb','acd','ace']
+
+def match(s,word):
+    length_s = len(s)
+    length_w = len(word)
+    if length_s < length_w:
+        return(0)
+
+    i = 0
+    index = 0
+    while i < length_w:
+        index = S.find(word[i],index)
+        if index == -1:
+            break
+        else:
+            i += 1
+            index += 1
+
+    if i == length_w:
+        return(True)
+    else:
+        return(False)
+
+num = 0
+for word in words:
+    if match(S,word):
+        num += 1
+
+print(num)
