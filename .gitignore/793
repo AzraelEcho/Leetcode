@@ -1,0 +1,42 @@
+k = 80502705
+
+#Method 1:TLE
+if k == 0: print(5)
+i = 5
+t = 0
+while t < k:
+    j = 5
+    while i%j == 0:
+        #pdb.set_trace()
+        t += 1
+        j *= 5
+    i += 5
+
+if t == k:
+    print(5)
+else:
+    print(0)
+    
+
+#Method 2
+def nzero(n):
+  f = 5
+	cnt = 0
+	while f <= n:
+	    cnt += n // f
+	    f *= 5
+	return cnt
+
+if K == 0:
+  return 5
+
+min = 1
+max = K * 5
+while min < max:
+  mid = (min + max) // 2
+  if nzero(mid) < K:
+    min = mid + 1
+  else:
+    max = mid
+    
+    
